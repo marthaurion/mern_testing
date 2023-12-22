@@ -6,6 +6,9 @@ import ShowBookList from './components/ShowBookList';
 import ShowBookDetails from './components/ShowBookDetails';
 import UpdateBookInfo from './components/UpdateBookInfo';
 
+import ShowAllPosts from './components/ShowAllPosts';
+import CreatePost from './components/CreatePost';
+
 const App = () => {
   return (
     <Router>
@@ -15,6 +18,8 @@ const App = () => {
           <Route path='/create-book' element={<CreateBook />} />
           <Route path='/edit-book/:id' element={<UpdateBookInfo />} />
           <Route path='/show-book/:id' element={<ShowBookDetails />} />
+          <Route path='/postsTest' element={<ShowAllPosts />} />
+          <Route path='/create-post' element={<CreatePost />} />
         </Routes>
       </div>
     </Router>

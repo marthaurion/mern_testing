@@ -3,6 +3,7 @@ const connectDB = require('./config/db');
 const cors = require('cors');
 
 const books = require('./routes/books');
+const posts = require('./routes/post');
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => res.send('Hello world!'));
 
 // use routes
 app.use('/books', books);
+app.use('/posts', posts);
 
 const port = process.env.PORT || 8082;
 
