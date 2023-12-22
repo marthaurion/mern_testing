@@ -25,10 +25,11 @@ const CreatePost = (props) => {
         setPost({
           title: '',
           content: '',
+          published_date: '',
         });
 
         // Push to /
-        navigate('/postsTest');
+        navigate('/');
       })
       .catch((err) => {
         console.log('Error in CreatePost!');
@@ -42,7 +43,7 @@ const CreatePost = (props) => {
           <div className='col-md-8 m-auto'>
             <br />
             <Link to='/' className='btn btn-outline-warning float-left'>
-              ShowPostList
+              Show Post List
             </Link>
           </div>
           <div className='col-md-8 m-auto'>
@@ -61,6 +62,17 @@ const CreatePost = (props) => {
                 />
               </div>
               <br />
+
+              <div className='form-group'>
+                <input
+                  type='date'
+                  placeholder='published_date'
+                  name='published_date'
+                  className='form-control'
+                  value={post.published_date}
+                  onChange={onChange}
+                />
+              </div>
 
               <div className='form-group'>
                 <input

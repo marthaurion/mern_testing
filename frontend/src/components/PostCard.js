@@ -14,7 +14,7 @@ const PostCard = (props) => {
       />
       <div className='desc'>
         <h2>
-          <Link to={`/show-book/${post._id}`}>{post.title}</Link>
+          <Link to={`/show-post/${post._id}`}>{post.title}</Link>
         </h2>
       </div>
     </div>
